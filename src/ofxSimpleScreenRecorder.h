@@ -77,7 +77,8 @@ public:
         for(int i = 0; i < numBffr; i++)
             pixels[i] = ofPixels();
         
-        path = _path == "" ? ofDirectory::ofDirectory(_path).getAbsolutePath() + "/" : _path;
+       // path = _path == "" ? ofDirectory::ofDirectory(_path).getAbsolutePath() + "/" : _path;
+       path = _path == "" ? ofDirectory(_path).getAbsolutePath() + "/" : _path;
         std::cout << "ofxSSR::target path - " << path << endl;
         
         isRunning = false;
